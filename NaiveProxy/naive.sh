@@ -258,7 +258,7 @@ install_caddy() {
     rm /root/src/ -rf
     mkdir /root/src && cd /root/src/
     go install github.com/caddyserver/xcaddy/cmd/xcaddy@v0.2.1
-    ~/go/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive
+    ~/go/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@v2.7.5-caddy2-naive2
     cp caddy /usr/bin/
     /usr/bin/caddy version        # 2022-4-8 23:09
     #v2.4.6 h1:HGkGICFGvyrodcqOOclHKfvJC0qTU7vny/7FhYp9hNw=  
