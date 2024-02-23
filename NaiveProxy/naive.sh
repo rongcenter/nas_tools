@@ -238,8 +238,8 @@ domain_check() {
 install_go() {
     cd /opt
     rm /opt/go*.tar.gz /usr/local/go/ -rf
-    wget https://dl.google.com/go/go1.21.0.linux-${caddy_arch}.tar.gz
-    tar -zxf go1.21.0.linux-${caddy_arch}.tar.gz -C /usr/local/
+    wget https://dl.google.com/go/go1.19.7.linux-${caddy_arch}.tar.gz
+    tar -zxf go1.19.7.linux-${caddy_arch}.tar.gz -C /usr/local/
     echo export GOROOT=/usr/local/go >> /etc/profile
     echo export PATH=$GOROOT/bin:$PATH >> /etc/profile
     source /etc/profile
@@ -254,7 +254,7 @@ install_go() {
 }
 
 install_caddy() {
-    # download caddy file then install
+    # download caddy file then install 1.21.0
     rm /root/src/ -rf
     mkdir /root/src && cd /root/src/
     go install github.com/caddyserver/xcaddy/cmd/xcaddy@v0.2.1
