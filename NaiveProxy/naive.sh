@@ -238,7 +238,7 @@ domain_check() {
 install_go() {
     cd /opt
     rm /opt/go*.tar.gz /usr/local/go/ -rf
-    wget https://go.dev/dl/go1.21.0.linux-${caddy_arch}.tar.gz
+    wget https://dl.google.com/go/go1.21.0.linux-${caddy_arch}.tar.gz
     tar -zxf go1.21.0.linux-${caddy_arch}.tar.gz -C /usr/local/
     echo export GOROOT=/usr/local/go >> /etc/profile
     echo export PATH=$GOROOT/bin:$PATH >> /etc/profile
